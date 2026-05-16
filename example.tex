@@ -1,0 +1,132 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+% Define colors
+\definecolor{darkblue}{rgb}{0.0, 0.2, 0.6}
+
+% Section formatting
+\titleformat{\section}{\large\scshape\raggedright\color{darkblue}}{}{0em}{}[\titlerule]
+\titleformat{\subsection}[runin]{\bfseries}{}{0em}{}[:]
+
+% Remove paragraph indentation
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\pagestyle{empty} % no page number
+
+% Name and contact details
+\begin{center}
+{\LARGE \textbf{Alex Johnson}}\\[10pt]
+{\Large \textit{Full Stack Developer}}\\[10pt]
+\textcolor{darkblue}{\href{mailto:someone@example.com}{someone@example.com} | \href{tel:+07777777777}{07777777777} | \href{https://www.linkedin.com/in/alexjohnson/}{LinkedIn} | \href{https://github.com/someone}{github.com/someone}}
+\end{center}
+
+% Personal Profile
+\section*{Profile Summary}
+Full stack developer with 5 years of experience building scalable web applications across cloud environments. Proven track record in designing CI/CD pipelines, containerized deployments, and REST APIs for production systems serving thousands of users. Comfortable working across the full stack — from React frontends to Spring Boot backends — and experienced in cross-functional agile teams. Passionate about clean code, automation, and continuous learning.
+
+% Technical Skills
+\section*{Technical Skills}
+\begin{itemize}[noitemsep]
+\item \textbf{CI/CD Tools:} GitHub Actions, Azure DevOps, Jenkins
+\item \textbf{Cloud:} Azure (AZ-900 certified), AWS (Solutions Architect Associate)
+\item \textbf{Containerization:} Docker, Kubernetes, Helm
+\item \textbf{Infrastructure as Code:} Terraform, Ansible
+\item \textbf{Scripting:} Python, Bash, PowerShell
+\item \textbf{Monitoring:} Prometheus, Grafana, Datadog
+\item \textbf{Source Control:} Git, GitHub, GitLab
+\item \textbf{Databases:} PostgreSQL, MySQL, MongoDB
+\item \textbf{Security:} Secure coding practices, OAuth 2.0, Azure Key Vault
+\item \textbf{Web Development:} React.js, TypeScript, Next.js, Spring Boot
+\end{itemize}
+
+% Professional Experience
+\section*{Professional Experience}
+\subsection*{Example Corp, Stockholm}
+\textit{Senior Full Stack Developer, Jan 2022 - Present}
+\begin{itemize}[noitemsep]
+\item Designed and implemented CI/CD pipelines using GitHub Actions and Azure DevOps, reducing deployment time by 50\%.
+\item Provisioned cloud infrastructure on Azure with Terraform, enabling consistent and repeatable deployments across staging and production.
+\item Containerized microservices with Docker and orchestrated them with Kubernetes, supporting zero-downtime rolling releases.
+\item Led migration of a monolithic Java application to a microservices architecture, improving system scalability and team autonomy.
+\item Introduced Prometheus and Grafana dashboards for real-time monitoring, cutting mean time to detection (MTTD) by 40\%.
+\end{itemize}
+
+\subsection*{WebSolutions AB, Gothenburg}
+\textit{Full Stack Developer, Jun 2020 - Dec 2021}
+\begin{itemize}[noitemsep]
+\item Built and maintained REST APIs using Spring Boot, serving a React.js frontend used by over 10,000 active users.
+\item Migrated on-premises SQL Server databases to Azure SQL Database, reducing operational overhead and improving query performance.
+\item Secured application secrets using Azure Key Vault, achieving compliance with company data handling policies.
+\item Automated integration testing in the CI pipeline, cutting regression bugs reaching production by 35\%.
+\item Collaborated in a cross-functional agile team of 8, taking part in sprint planning, code reviews, and retrospectives.
+\end{itemize}
+
+\subsection*{StartupXYZ, Remote}
+\textit{Junior Developer, Sep 2019 - May 2020}
+\begin{itemize}[noitemsep]
+\item Developed customer-facing features in React.js and TypeScript, improving user engagement metrics by 20\%.
+\item Maintained a Node.js backend connected to a PostgreSQL database, handling data for a SaaS product.
+\item Set up a GitHub Actions workflow for automated linting, testing, and deployment to AWS EC2.
+\item Participated in pair programming sessions and adopted TDD practices, raising unit test coverage from 40\% to 75\%.
+\end{itemize}
+
+\subsection*{Freelance}
+\textit{Web Developer, Jan 2019 - Aug 2019}
+\begin{itemize}[noitemsep]
+\item Delivered five client websites using Next.js and Tailwind CSS, optimised for performance and SEO.
+\item Integrated Stripe payment API for two e-commerce clients, handling checkout flows and webhook events.
+\item Deployed projects to AWS and Vercel, configuring custom domains, SSL certificates, and CDN caching.
+\end{itemize}
+
+% Hobby Projects
+\section*{Hobby Projects}
+\subsection*{OpenShop — E-commerce Platform}
+\textit{Jan 2023 - Present}
+\begin{itemize}[noitemsep]
+\item Building a full-stack e-commerce platform with Next.js (frontend) and Spring Boot (backend) as an open-source learning project.
+\item Using PostgreSQL for product, order, and user data with a clean domain-driven schema design.
+\item Implemented JWT authentication, CORS configuration, and role-based access control.
+\item Containerised with Docker Compose locally; Kubernetes manifests prepared for cloud deployment.
+\item Source available at \href{https://github.com/someone/openshop}{github.com/someone/openshop}.
+\end{itemize}
+
+\subsection*{WeatherNow — Real-time Weather App}
+\textit{Mar 2022 - Jun 2022}
+\begin{itemize}[noitemsep]
+\item Built a weather web app with Spring Boot backend and vanilla JavaScript frontend.
+\item Integrated OpenWeatherMap API and OpenCageData API for location-aware forecasts.
+\item Deployed to Azure App Service with a managed MySQL database; accessible at \href{https://weathernow.example.com}{weathernow.example.com}.
+\end{itemize}
+
+\subsection*{CryptoTracker — Mobile App (Xamarin)}
+\textit{Sep 2021 - Dec 2021}
+\begin{itemize}[noitemsep]
+\item Developed a cross-platform iOS/Android app in Xamarin.Forms with a .NET backend on Azure App Service.
+\item Fetched live crypto prices via the CoinGecko API and pushed updates to clients using SignalR.
+\item Stored portfolio data in Azure Cosmos DB; containerised the backend with Docker Compose.
+\end{itemize}
+
+% Education and Certifications
+\section*{Education}
+\textbf{Example University, London}\\
+\textit{BSc Computer Science} | 2015--2019\\
+\textbf{Example Institute of Technology, Online}\\
+\textit{YH Java Integration Developer} | 2020--2021\\
+\textbf{Example College, Stockholm}\\
+\textit{YH .NET Cloud Development} | 2021--2022\\
+
+\section*{Certifications}
+\begin{itemize}
+    \item Microsoft Azure Fundamentals AZ-900 (Mar 2022)
+    \item AWS Certified Solutions Architect -- Associate (Nov 2022)
+    \item Certified Kubernetes Application Developer -- CKAD (Jul 2023)
+    \item HashiCorp Certified: Terraform Associate (Jan 2024)
+\end{itemize}
+\end{document}

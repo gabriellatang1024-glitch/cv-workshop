@@ -1,0 +1,144 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+% Define colors
+\definecolor{darkblue}{rgb}{0.0, 0.2, 0.6}
+
+% Section formatting
+\titleformat{\section}{\large\scshape\raggedright\color{darkblue}}{}{0em}{}[\titlerule]
+\titleformat{\subsection}[runin]{\bfseries}{}{0em}{}[:]
+
+% Remove paragraph indentation
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\pagestyle{empty} % no page number
+
+% Name and contact details
+\begin{center}
+{\LARGE \textbf{[Your Full Name]}}\\[10pt]
+{\Large \textit{[Your Target Job Title]}}\\[10pt]
+\textcolor{darkblue}{\href{mailto:your.email@example.com}{your.email@example.com} | \href{tel:+1234567890}{+1234567890} | \href{https://www.linkedin.com/in/yourprofile/}{LinkedIn} | \href{https://github.com/yourusername}{GitHub}}
+\end{center}
+
+% Personal Profile
+\section*{Profile Summary}
+% Write a short paragraph highlighting your experience, skills, and goals.
+[Your Summary Here. Example based on the original: Seasoned DevOps professional with a profound passion for the [Target Industry] and over [X] years of experience in designing, implementing, and optimizing CI/CD pipelines across multiple cloud platforms. Proven expertise in leveraging containerization, infrastructure as code, and automation practices to streamline software delivery processes for mission-critical applications. Skilled in coaching cross-functional teams on DevOps methodologies, fostering a culture of collaboration, and driving continuous improvement initiatives. Motivated by challenging tasks and committed to maintaining an overall understanding of complex systems, with hands-on experience in working with multi-team environments and intricate integration processes. Proficient in utilizing a wide range of technologies and tools, including Python, Git, Cloud/Azure, Kubernetes, Linux, Ansible, Terraform, PostgreSQL, Prometheus, Grafana, TypeScript, ReactJS, and Docker. Passionate about contributing to the development of cutting-edge technologies and advancing the industry through innovative DevOps solutions.]
+
+% Technical Skills
+\section*{Technical Skills}
+\begin{itemize}[noitemsep]
+\item \textbf{CI/CD Tools:} Azure DevOps, Jenkins, GitHub Actions
+\item \textbf{Cloud:} Azure (AZ-900 certified), AWS (AWS Certified Solutions Architect Associate)
+\item \textbf{Containerization:} Docker, Kubernetes, Helm
+\item \textbf{Infrastructure as Code:} Terraform, Ansible
+\item \textbf{Scripting:} Python, Bash, PowerShell, AWS Lambda, Azure Functions
+\item \textbf{Monitoring:} Prometheus, Grafana, DataDog, New Relic
+\item \textbf{Source Control:} Git, GitHub, GitLab
+\item \textbf{Databases:} PostgreSQL, MySQL, SQL Server, MongoDB
+\item \textbf{Security:} Secure coding practices, Cloud security
+\item \textbf{Web Development:} React.js, TypeScript, Next.js, Vue.js
+\end{itemize}
+
+% Professional Experience
+\section*{Professional Experience}
+\subsection*{[Company Name 1], [Location]}
+\textit{[Job Title], [Month Year] - [Month Year]}
+\begin{itemize}[noitemsep]
+\item Designed and implemented CI/CD pipelines using Azure DevOps and GitHub Actions, automating build, test, and deployment processes, resulting in a 50\% reduction in deployment time.
+\item Leveraged Terraform and Ansible for Infrastructure as Code (IaC) to provision and manage cloud resources on Azure, ensuring consistent and repeatable infrastructure deployments.
+\item Integrated Docker and Kubernetes for containerization, enabling seamless application deployment and scaling across multiple environments.
+\item Collaborated with development teams to promote a DevOps culture, conducting workshops and mentoring sessions on DevOps practices, automation, and continuous integration.
+\item Implemented monitoring and logging solutions using Prometheus and Grafana, providing real-time visibility into application performance and enabling data-driven decision-making.
+\end{itemize}
+
+\subsection*{[Company Name 2], [Location]}
+\textit{[Job Title], [Month Year] - [Month Year]}
+\begin{itemize}[noitemsep]
+\item Migrated on-premises SQL Server databases to Azure SQL Database, leveraging Azure's PaaS capabilities for enhanced performance, scalability, and cost-efficiency.
+\item Established secure key management using Azure Key Vault, ensuring the protection of sensitive data and compliance with industry standards.
+\item Integrated Azure APIs with frontend components, enabling seamless communication between backend services and the user interface.
+\item Implemented CI/CD pipelines using Azure DevOps, automating testing, and deployment processes, resulting in a 30\% reduction in time to market for new features.
+\item Conducted comprehensive testing and integration of frontend components with backend Azure APIs, ensuring functionality, performance, and reliability of the platform.
+\end{itemize}
+
+\subsection*{[Company Name 3], [Location]}
+\textit{[Job Title], [Month Year] - [Month Year]}
+\begin{itemize}[noitemsep]
+\item Migrated business-critical applications to a microservices architecture using Java and Spring Boot, improving scalability and maintainability by 40\%.
+\item Established a CI/CD pipeline using GitHub Actions, automating testing and deployment processes for Java applications.
+\item Implemented Maven for comprehensive project and dependency management, streamlining the build process and ensuring consistent builds across environments.
+\item Promoted Test-Driven Development (TDD) and conducted code reviews to maintain high standards of code quality and encourage best practices among the development team.
+\end{itemize}
+
+\subsection*{[Company Name 4]}
+\textit{[Job Title], [Month Year] - [Month Year]}
+\begin{itemize}[noitemsep]
+\item Migrated applications to the AWS cloud, leveraging serverless architecture and AWS Lambda for scalability and cost efficiency.
+\item Utilized AWS CloudFormation for Infrastructure as Code (IaC), automating the deployment and management of AWS resources.
+\item Implemented GraphQL for efficient data fetching, reducing network overhead and improving application performance by 25\%.
+\item Established CI/CD pipelines with AWS CodePipeline, enabling automated testing and deployment of applications, reducing time to market by 40\%.
+\end{itemize}
+
+% Hobby Projects
+\section*{Hobby Projects}
+\subsection*{[Institution/Organization], [Project Name 1] E-commerce Website}
+\textit{[Month Year] - Present}
+\begin{itemize}[noitemsep]
+\item Developing a robust e-commerce website using Next.js for the frontend and Spring Boot for the backend, ensuring a seamless shopping experience for users.
+\item Utilizing MySQL for storing product, order, and user data, implementing robust data management and security measures.
+\item Implementing Cross-Origin Resource Sharing (CORS) configuration to secure frontend-backend communication, enhancing application security.
+\item Designing and implementing features for browsing products, managing orders, and processing payments, catering to the needs of both customers and vendors.
+\item Adhering to industry-standard security practices and implementing authentication mechanisms to safeguard data privacy and build user trust.
+\item Conducting mocking tests to simulate different scenarios and ensure application reliability, and implementing Kubernetes for container orchestration to enhance scalability and manageability.
+\end{itemize}
+
+\subsection*{[Institution/Organization], [Project Name 2] Web Application}
+\textit{[Month Year] - [Month Year]}
+\begin{itemize}[noitemsep]
+\item Developed a web application using Spring Boot, HTML, CSS, and JavaScript, allowing users to check weather conditions for any location worldwide.
+\item Implemented the application's frontend with HTML, CSS, and JavaScript, ensuring a responsive and intuitive user interface for seamless navigation and interaction.
+\item Utilized Spring Boot and MySQL for the backend, enabling efficient server-side processing and data storage.
+\item Integrated the OpenWeatherMap API and OpenCageData API to fetch real-time weather data based on user input and retrieve location information, ensuring accurate and up-to-date weather information for the specified locations.
+\item Migrated the application to a cloud platform, deploying both the frontend and backend components and leveraging managed database hosting, making it accessible to users globally via \href{https://your-project-link.com}{https://your-project-link.com}
+\end{itemize}
+
+\subsection*{[Institution/Organization] Graduate Project (Xamarin)}
+\textit{[Month Year] - [Month Year]}
+\begin{itemize}[noitemsep]
+\item Developed Xamarin mobile applications for both iOS and Android platforms within a single project, leveraging the cross-platform capabilities of Xamarin for efficient code sharing and maintenance.
+\item Implemented a .NET backend using Azure App Service, ensuring seamless communication and data synchronization between the mobile apps and the cloud.
+\item Integrated Azure Cosmos DB to efficiently manage and store data within the .NET services, enhancing real-time data processing and scalability of the application.
+\item Utilized SignalR for establishing real-time communication channels, enabling instant updates and notifications to users, thereby enriching the interactivity and user experience of the .NET application.
+\item Employed the CoinGecko API to fetch real-time cryptocurrency data, providing users with up-to-date market information and insights directly within the mobile app interface.
+\item Utilized Wireshark and other networking troubleshooting tools to diagnose and resolve any networking issues, ensuring smooth communication between the mobile apps and backend services.
+\item Implemented Docker Compose for containerizing the .NET backend services, enabling consistent and reproducible deployments across different environments.
+\item Leveraged Kubernetes for container orchestration, ensuring high availability, scalability, and efficient resource utilization for the .NET backend services.
+\end{itemize}
+
+
+% Education and Certifications
+\section*{Education and Certifications}
+\textbf{[University/Institution Name 1]}\\
+\textit{[Degree Name in Field]} | [Start Year]-[End Year]\\
+\textbf{[University/Institution Name 2]}\\
+\textit{[Degree Name in Field]} | [Start Year]-[End Year]\\
+\textbf{[University/Institution Name 3]}\\
+\textit{[Degree Name in Field]} | [Start Year]-[End Year]\\
+
+
+\section*{Certifications}
+\begin{itemize}
+    \item [Certification Name 1] ([Month Year])
+    \item [Certification Name 2] ([Month Year])
+    \item [Certification Name 3] ([Month Year])
+    \item [Certification Name 4] ([Month Year])
+\end{itemize}
+\end{document}
