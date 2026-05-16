@@ -15,56 +15,98 @@
 
 ---
 
-## 🚀 快速开始
+## 🚀 快速开始 · Task 0
 
-### 第一步 · Clone
+### 第一步 · 先 Fork 这个模板 Repo
+
+打开：
+
+```text
+https://github.com/bluehawana/cv-workshop
+```
+
+点击右上角 **Fork**，把这个模板复制到你自己的 GitHub 账号下。
+
+### 第二步 · 从你自己的 GitHub clone 到本地
+
+不要直接 clone `bluehawana/cv-workshop`。直接 clone 我的仓库、或者给我的仓库提 PR，都不算完成。
+
+Fork 完以后，把下面的 `your-username` 换成你自己的 GitHub 用户名：
 
 ```bash
-git clone https://github.com/bluehawana/cv-workshop.git
+git clone https://github.com/your-username/cv-workshop.git
 cd cv-workshop
 ```
 
-### 第二步 · 在 Overleaf 编译
+### 第三步 · 在本地编辑
 
-1. 打开 [overleaf.com](https://www.overleaf.com) → 登录 → **New Project → Blank Project**
-2. 删除默认的 `main.tex`
-3. 上传 `example.tex` → 点击 **Compile** → 确认格式正确
-4. 再上传 `cvTemplate.tex` → 开始填写你自己的内容
-
-> 编译器选 **pdfLaTeX**（Overleaf 默认），无需额外配置。
-
-### 第三步 · 填写你的简历
-
-把 `cvTemplate.tex` 里所有 `[占位符]` 替换成你自己的真实内容：
+用 VS Code / Cursor 打开 `cvTemplate.tex`，把所有 `[占位符]` 换成你的真实信息：
 
 - `[Your Full Name]` → 你的姓名
 - `[Your Target Job Title]` → 你的目标职位
 - `[Company Name 1]` → 你的公司名
-- 以此类推……
+- 以此类推
+
+### 第四步 · Commit + Push `.tex`
+
+```bash
+git add cvTemplate.tex
+git commit -m "my cv first version"
+git push
+```
+
+### 第五步 · 在 Overleaf 编译 PDF，再 Push 回 GitHub
+
+1. 打开 [overleaf.com](https://www.overleaf.com) → 登录 → **New Project → Blank Project**
+2. 上传你改好的 `cvTemplate.tex`
+3. 点击 **Compile**
+4. 下载 PDF
+5. 把 PDF 放进这个项目文件夹
+
+然后：
+
+```bash
+git add your-name-cv.pdf
+git commit -m "add compiled cv pdf"
+git push
+```
+
+> 编译器选 **pdfLaTeX**（Overleaf 默认），无需额外配置。
 
 ---
 
-## 🏆 Workshop 挑战 · 完成即可加入社群
+## 🏆 Workshop 挑战 · Task 0 到 Task 4
 
-今天的挑战只有一个：
+闯关路径：
 
-> **用 `cvTemplate.tex` 拼出你自己的第一份 LaTeX 简历，编译成 PDF，发给我。**
+1. **Task 0** · Fork `bluehawana/cv-workshop`
+2. **Task 1** · Clone 你自己账号下的 repo 到本地
+3. **Task 2** · 修改 `cvTemplate.tex`
+4. **Task 3** · Compile 成 PDF
+5. **Task 4** · `git add` → `git commit` → `git push`
 
-### 怎么提交？
+必须 push 到你自己的 GitHub repo，例如：
 
-把编译好的 PDF 发送到：
+```text
+https://github.com/your-username/cv-workshop
+```
 
-📧 **info@hongyanab.com**  
-邮件标题：`[CV Workshop 2026] 你的姓名`
+直接 clone 我的仓库、直接 push/PR 到 `bluehawana/cv-workshop`，GitHub Actions 不会认定为闯关成功。
 
-### 提交后你会得到什么？
+### 彩蛋怎么拿？
 
-✅ 我会在 **24 小时内**回复你，附上：
+在 **2026-05-17 周日 23:59 Stockholm 时间之前**，只要你的 GitHub repo 里同时有：
 
-1. **Telegram 群组邀请链接** — 北欧求职互助社群，持续更新内推机会、JD 分析、简历点评
-2. 简短的简历反馈（如果你想要的话）
+- `.tex` 源文件
+- 编译好的 `.pdf`
 
-> 没有截止日期。今天做完最好，做不完带回家做。只要发过来，链接就是你的。
+GitHub Actions 会自动检查。成功后它会在你的 commit status / commit comment 里发出知识共享群邀请链接：
+
+```text
+https://t.me/+kvfCBofvxek2YTBk
+```
+
+> 截止后 GitHub Actions 会自动失效，不再发邀请链接。
 
 ---
 
