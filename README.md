@@ -27,6 +27,8 @@ https://github.com/bluehawana/cv-workshop
 
 点击右上角 **Fork**，把这个模板复制到你自己的 GitHub 账号下。
 
+Fork 完成后，进入你自己的 repo，打开 **Actions** 页面。如果 GitHub 提示 workflows 需要启用，点击 **I understand my workflows, go ahead and enable them**。
+
 ### 第二步 · 从你自己的 GitHub clone 到本地
 
 不要直接 clone `bluehawana/cv-workshop`。直接 clone 我的仓库、或者给我的仓库提 PR，都不算完成。
@@ -92,6 +94,8 @@ https://github.com/your-username/cv-workshop
 ```
 
 直接 clone 我的仓库、直接 push/PR 到 `bluehawana/cv-workshop`，GitHub Actions 不会认定为闯关成功。
+
+如果你的 fork 里 Actions 没有启动，到你自己的 repo 的 **Actions** 页面启用 workflows，然后再 push 一次。
 
 ### 彩蛋怎么拿？
 
