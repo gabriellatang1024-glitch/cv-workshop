@@ -12,6 +12,7 @@ permissions:
 
 env:
   DEADLINE_UTC: "2026-05-17T21:59:00Z"
+  TEMPLATE_REPOSITORY: "bluehawana/cv-workshop"
 
 jobs:
   check-and-reward:
@@ -44,8 +45,33 @@ jobs:
             echo "Challenge deadline has passed"
           fi
 
+      - name: Verify this is the participant fork
+        id: repo_check
+        run: |
+          if [ "$GITHUB_REPOSITORY" = "$TEMPLATE_REPOSITORY" ]; then
+            echo "participant_repo=false" >> "$GITHUB_OUTPUT"
+            echo "This is the template repo. Direct pushes or PRs here do not count."
+          else
+            echo "participant_repo=true" >> "$GITHUB_OUTPUT"
+            echo "This is a participant repo: $GITHUB_REPOSITORY"
+          fi
+
+      - name: Status - template repo does not count
+        if: steps.repo_check.outputs.participant_repo != 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.repos.createCommitStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              sha: context.sha,
+              state: 'failure',
+              description: 'Fork this repo first. Direct pushes or PRs to the template do not count.',
+              context: 'CV Workshop / Submission'
+            });
+
       - name: Status - not complete yet
-        if: steps.deadline.outputs.before_deadline == 'true' && (steps.check_files.outputs.tex_count == '0' || steps.check_files.outputs.pdf_count == '0')
+        if: steps.repo_check.outputs.participant_repo == 'true' && steps.deadline.outputs.before_deadline == 'true' && (steps.check_files.outputs.tex_count == '0' || steps.check_files.outputs.pdf_count == '0')
         uses: actions/github-script@v7
         with:
           script: |
@@ -59,7 +85,7 @@ jobs:
             });
 
       - name: Status - deadline passed
-        if: steps.deadline.outputs.before_deadline != 'true'
+        if: steps.repo_check.outputs.participant_repo == 'true' && steps.deadline.outputs.before_deadline != 'true'
         uses: actions/github-script@v7
         with:
           script: |
@@ -73,7 +99,7 @@ jobs:
             });
 
       - name: Status - complete, post knowledge-sharing group link
-        if: steps.deadline.outputs.before_deadline == 'true' && steps.check_files.outputs.tex_count != '0' && steps.check_files.outputs.pdf_count != '0'
+        if: steps.repo_check.outputs.participant_repo == 'true' && steps.deadline.outputs.before_deadline == 'true' && steps.check_files.outputs.tex_count != '0' && steps.check_files.outputs.pdf_count != '0'
         uses: actions/github-script@v7
         with:
           script: |
